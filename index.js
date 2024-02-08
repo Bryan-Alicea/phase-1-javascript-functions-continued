@@ -16,7 +16,47 @@ function saturdayFun(activity = "roller-skate") {
 
 saturdayFun()
 
-(funciton () {
-    console.log("I am a function expression")
+//Function expression is wrapped in ()
+(function () {
+    console.log("Yet more razzling");
+  });
+
+
+// Anonymous Function
+/*
+function() {
+    console.log(`Yet more razzling`)
+}
+*/
+//example
+
+const button = document.getElementById("button");
+button.addEventListener('click', function () {
+    console.log(`Yet more razzling`);
 });
 
+// Define a Function using a Function Expresion
+
+const fn = function () {
+    console.log(`Yet more potatos`);
+}  
+
+fn;
+fn();
+
+function mondayWork (activity = "go to the office") {
+    return `This Monday, I will ${activity}.`
+}
+
+
+//IIFE
+
+(function (baseNumber) {
+    return baseNumber + 3;
+})(5)
+
+function wrapAdjective (input) {
+   return function (adjective = "special") {
+        return `You are ${input}${adjective}${input}!`
+   }
+}
